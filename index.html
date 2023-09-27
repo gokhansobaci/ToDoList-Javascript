@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="bumblebee">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="style.css">
+   
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+   
+
+    <title>Todolist</title>
+</head>
+
+<body>
+
+    <!-- main todo container -->
+    <div class="container">
+        <!-- header that has input and add button -->
+        <header>
+            <h1>Todo List</h1>
+
+            <div class="input-section">
+                <input id="todo-input" type="text" placeholder="✍🏼 listene bir şeyler ekle..."
+                    class="input w-full max-w-xs" />
+                <button id="add-button" class="btn btn-add ">
+                    <i class="bx bx-plus bx-sm"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Silme butonları -->
+
+        <div class="todos-filter">
+
+            <button id="delete-selected" class="btn btn-ghost delete-selected-btn">
+                Tamamlananları Sil
+            </button>
+            <button id="delete-all" class="btn btn-ghost delete-all-btn">
+                Hepsini Sil
+            </button>
+        </div>
+
+
+        <!-- Dinamik veri içerği için -->
+        <ul id="all-todos" class="todos-list">
+
+        </ul>
+
+
+        <!-- açılır menü -->
+        <div class="filters">
+            <div class="dropdown">
+                <button class="dropbtn">Filtrele</button>
+                <div class="dropdown-content">
+                    <a href="#" id="all">Hepsi</a>
+                    <a href="#" id="rem">İşlemde</a>
+                    <a href="#" id="com">Tamamlandı</a>
+                </div>
+            </div>
+
+            
+            <div class="completed-task">
+                <p>Tamamlanan: <span id="c-count">0</span></p>
+            </div>
+            <div class="remaining-task">
+                <p>Tüm Görevler: <span id="r-count">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+
+</body>
+
+</html>
